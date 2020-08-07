@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "afrozaks-4dc0"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "afrozaks-4dc0"
+    spec:
+      containers:
+        - name: "afrozaks-4dc0"
+          image: "afrozcrs.azurecr.io/afrozaks"
+          ports:
+          - containerPort: 8080
